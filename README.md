@@ -9,8 +9,8 @@ The sample on http://jonasbr68.github.io/TSIncludeJS/sample/unittesting.html
 for instance uses a tests.js file like below.
 With a fluent api you specify dependency/load order, and wrap your dependent code in an anonymous function.
   
-<code>
-TSIncludeJS.include("https://code.jquery.com/jquery-2.1.4.js")  <br />
+
+  TSIncludeJS.include("https://code.jquery.com/jquery-2.1.4.js")  <br />
     .include("http://code.jquery.com/qunit/qunit-1.20.0.js")    <br />
     .done(function () {    <br />
     QUnit.test("hello test", function (assert) {    <br />
@@ -19,5 +19,5 @@ TSIncludeJS.include("https://code.jquery.com/jquery-2.1.4.js")  <br />
     QUnit.test("jquery test", function (assert) {    <br />
         assert.ok((typeof $ === "function"), "Works!");    <br />
     });    <br />
-});     <br />
-</code>
+  });     <br />
+
