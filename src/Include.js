@@ -1,5 +1,3 @@
-//See sample sample/UnitTests.html for usage
-
 var Include = (function () {
     function Include() {
         this.queue = [];
@@ -32,8 +30,6 @@ var Include = (function () {
     Include.prototype.done = function (p) {
         this.doneCallback = p;
     };
-    ;
     return Include;
 })();
 var TSIncludeJS = new Include();
-//# sourceMappingURL=Include.js.map
