@@ -8,6 +8,6 @@ TSIncludeJS.include("https://code.jquery.com/jquery-2.1.4.js")
         assert.ok(1 == 1, "Works!");
     });
     QUnit.test("jquery test", function (assert) {
-        assert.ok((typeof $ === "JQueryStatic"), "Works!");
+        assert.ok((typeof $ === "function"), "Works!");
     });
 });
