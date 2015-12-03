@@ -5,7 +5,7 @@ Add you script with dependencies like:
 <code>&lt;script src="../src/include.js" type="text/javascript" data-boot="tests.js">&lt;/script></code>    
 where tests.js is your script that defines dependencies and your code. 
 
-The sample on <http://jonasbr68.github.io/TSIncludeJS/sample/unittesting.html
+The sample on http://jonasbr68.github.io/TSIncludeJS/sample/unittesting.html
 for instance uses a tests.js file like below.
 With a fluent api you specify dependency/load order, and wrap your dependent code in an anonymous function.
 
