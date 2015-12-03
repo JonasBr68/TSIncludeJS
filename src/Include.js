@@ -1,3 +1,5 @@
+//See sample sample/UnitTests.html for usage
+
 var Include = (function () {
     function Include() {
         this.queue = [];
