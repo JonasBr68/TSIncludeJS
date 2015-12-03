@@ -31,7 +31,7 @@ class Include
     }
     done(p: () => void ){
         this.doneCallback = p;
-    };
+    }
 }
 
 var TSIncludeJS = new Include();
