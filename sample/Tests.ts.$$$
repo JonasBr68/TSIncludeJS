@@ -1,4 +1,4 @@
-﻿/// <reference path="../src/include.ts" />
+﻿/// <reference path="../src1/include.ts" />
 
 
 TSIncludeJS.include("https://code.jquery.com/jquery-2.1.4.js")
