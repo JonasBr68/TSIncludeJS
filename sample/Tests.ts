@@ -12,7 +12,7 @@ TSIncludeJS.include("https://code.jquery.com/jquery-2.1.4.js")
         });
 
         QUnit.test("jquery test", function (assert) {
-            assert.ok((typeof $ === "JQueryStatic"), "Works!");
+            assert.ok((typeof $ === "function"), "Works!");
         });
     });
 
