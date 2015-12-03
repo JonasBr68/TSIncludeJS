@@ -1,6 +1,4 @@
-//See sample sample/UnitTests.html for usage
-
-var Include = (function () {
+﻿var Include = (function () {
     function Include() {
         this.queue = [];
     }
@@ -11,6 +9,7 @@ var Include = (function () {
         if (this.queue.length == 0)
             this.doneCallback();
     };
+
     Include.prototype.include = function (jsScriptPath) {
         var _this = this;
         if (typeof document === undefined) {
@@ -20,7 +19,9 @@ var Include = (function () {
         scr.type = "text/javascript";
         scr.async = false;
         scr.src = jsScriptPath;
-        scr.onload = function (ev) { _this.onLoadHandler(ev); };
+        scr.onload = function (ev) {
+            _this.onLoadHandler(ev);
+        };
         scr.onerror = function (ev) {
             var scr = ev.srcElement;
             console.error(scr.src + " failed to load");
@@ -32,8 +33,7 @@ var Include = (function () {
     Include.prototype.done = function (p) {
         this.doneCallback = p;
     };
-    ;
     return Include;
 })();
+
 var TSIncludeJS = new Include();
-//# sourceMappingURL=Include.js.map
