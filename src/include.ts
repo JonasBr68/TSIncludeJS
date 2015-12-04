@@ -39,6 +39,12 @@ class Include
             this.loadNextScript(); //Start sequencial script loading
         return this;
     }
+    run(jsScriptPath: string): void {
+        var inc: Include = this.include(jsScriptPath);
+        inc.do(() => {
+            ;
+        });
+    }
     private loadNextScript(): void {
         this.loadedIndex++;
         var call: includeCall = this.fnqueue[this.loadedIndex];
@@ -58,7 +64,7 @@ class Include
         };
         document.head.appendChild(scr);
     }
-    done(p: () => void) {
+    do(p: () => void) {
         this.doneCallback = p;
     };
     boot(): any {

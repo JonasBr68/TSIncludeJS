@@ -28,6 +28,12 @@ var Include = (function () {
             this.loadNextScript(); //Start sequencial script loading
         return this;
     };
+    Include.prototype.run = function (jsScriptPath) {
+        var inc = this.include(jsScriptPath);
+        inc.do(function () {
+            ;
+        });
+    };
     Include.prototype.loadNextScript = function () {
         this.loadedIndex++;
         var call = this.fnqueue[this.loadedIndex];
@@ -46,7 +52,7 @@ var Include = (function () {
         };
         document.head.appendChild(scr);
     };
-    Include.prototype.done = function (p) {
+    Include.prototype.do = function (p) {
         this.doneCallback = p;
     };
     ;
@@ -70,3 +76,4 @@ var Include = (function () {
 })();
 var TSIncludeJS = new Include();
 TSIncludeJS.boot();
+//# sourceMappingURL=include.js.map
